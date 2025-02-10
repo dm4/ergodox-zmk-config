@@ -4,6 +4,14 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// Some shortcuts
+#define BRI_UP (C_BRIGHTNESS_INC)
+#define BRI_DN (C_BRIGHTNESS_DEC)
+#define O_TOG  OUT_TOG
+#define O_USB  OUT_USB
+#define O_BLE  OUT_BLE
+#define BT_S   BT_SEL
+
 / {
     behaviors {
         escgr: escape_grave {
@@ -26,13 +34,6 @@
         };
     };
 };
-
-#define BRI_UP (C_BRIGHTNESS_INC)
-#define BRI_DN (C_BRIGHTNESS_DEC)
-#define O_TOG OUT_TOG
-#define O_USB OUT_USB
-#define O_BLE OUT_BLE
-#define BT_S BT_SEL
 
 / {
     keymap {

@@ -13,29 +13,6 @@
 #define BT_S   BT_SEL
 
 / {
-    behaviors {
-        escgr: escape_grave {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DM4_ESCAPE_GRAVE";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
-
-        // dm4: for macOS style Cmd-Delete
-        mibs: minus_backspace {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DM4_MINUS_BACKSPACE";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp BKSP>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
-    };
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
         layer_0 {
@@ -104,4 +81,27 @@
             , <&macro_release &mo 1>
             ;
     )
+};
+
+/ {
+    behaviors {
+        escgr: escape_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DM4_ESCAPE_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        // dm4: for macOS style Cmd-Delete
+        mibs: minus_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DM4_MINUS_BACKSPACE";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp BKSP>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+    };
 };

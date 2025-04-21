@@ -1,4 +1,12 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    pathes:
+      - "build.yaml"
+      - "config/*.keymap"
+      - "config/*.conf"
+      - "config/west.yml"
+      - ".github/workflows/build.yml"
 
 jobs:
   build:

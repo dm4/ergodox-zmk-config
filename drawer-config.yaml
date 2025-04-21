@@ -1,0 +1,71 @@
+parse_config:
+  mark_alternate_layer_activators: true
+  raw_binding_map:
+    "&bootloader":
+      tap: $$mdi:bootstrap$$
+    "&sys_reset": $$mdi:reload-alert$$
+    "&altgui":
+      tap: $$mdi:apple-keyboard-command$$
+      shifted: $$mdi:apple-keyboard-option$$
+    "&mo1sft":
+      tap: fn
+      shifted: $$mdi:apple-keyboard-shift$$
+    "&bt BT_CLR": $$mdi:bluetooth-off$$
+    "&bt BT_SEL 0":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 0
+    "&bt BT_SEL 1":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 1
+    "&bt BT_SEL 2":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 2
+    "&bt BT_SEL 3":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 3
+    "&bt BT_SEL 4":
+      tap: $$mdi:bluetooth-connect$$
+      hold: 4
+
+  zmk_keycode_map:
+    C_VOL_UP: $$mdi:volume-plus$$
+    C_VOL_DN: $$mdi:volume-minus$$
+    C_BRI_UP: $$mdi:weather-sunset-up$$
+    C_BRI_DN: $$mdi:weather-sunset-down$$
+    C_PP: $$mdi:play-pause$$
+    C_NEXT: $$mdi:skip-next$$
+    C_PREV: $$mdi:skip-previous$$
+    SPC: $$mdi:keyboard-space$$
+    RET: $$mdi:keyboard-return$$
+    TAB: $$mdi:keyboard-tab$$
+    ESC: $$mdi:keyboard-esc$$
+    BKSP: $$mdi:backspace$$
+    LCTL: $$mdi:apple-keyboard-control$$
+    LSFT: $$mdi:apple-keyboard-shift$$
+    RSFT: $$mdi:apple-keyboard-shift$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    LALT: $$mdi:apple-keyboard-option$$
+    UP: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
+    GRAVE: "`" 
+    BSLH: "\\"
+    MINUS: "-"
+    EQL: "="
+    SCLN: ";"
+    SQT: "'"
+    CMMA: ","
+    DOT: "."
+    FSLH: "/"
+    LBKT: "["
+    RBKT: "]"
+    PLUS: "+"
+    STAR: "*"
+    SLASH: "/"
+
+draw_config:
+  svg_extra_style: |
+    .keypos-0 .key {
+      display: none;
+    }

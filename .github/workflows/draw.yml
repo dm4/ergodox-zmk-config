@@ -1,0 +1,19 @@
+on:
+  workflow_dispatch:
+  push:
+    pathes:
+      - "config/*.keymap"
+      - "drawer-config.yaml"
+      - ".github/workflows/draw.yml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/*.keymap"
+      config_path: "drawer-config.yaml"
+      output_folder: "images"
+      commit_message: "chore(draw): automatically generated keymap images"
+      fail_on_error: true

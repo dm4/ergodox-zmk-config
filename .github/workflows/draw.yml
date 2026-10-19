@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   push:
-    pathes:
+    paths:
       - "config/*.keymap"
       - "drawer-config.yaml"
       - ".github/workflows/draw.yml"
